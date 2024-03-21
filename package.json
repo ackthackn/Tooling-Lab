@@ -6,7 +6,8 @@
     "start": "open index.html",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "postinstall": "node .scripts/badge.js"
+    "postinstall": "node .scripts/badge.js",
+    "lint": "eslint --ext .js resources/scripts"
   },
   "author": "Yahya Gilany <gilanyym@ucmail.uc.edu>",
   "license": "UNLICENSED",
@@ -24,8 +25,5 @@
     "prettier": "^2.3.0",
     "regenerator-runtime": "^0.13.5",
     "simple-git": "^2.5.0"
-  },
-  "scripts": {
-    "lint": "eslint --ext .js resources/scripts"
   }
 }

@@ -1,7 +1,7 @@
 {
-  "name": "sandbox",
-  "version": "0.0.1",
-  "description": "",
+  "name": "my-webpack-project",
+  "version": "1.0.0",
+  "description": "My webpack project",
   "scripts": {
     "start": "open index.html",
     "test": "jest",
@@ -9,7 +9,12 @@
     "postinstall": "node .scripts/badge.js",
     "lint": "eslint --ext .js resources/scripts",
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch",
+    "serve": "webpack serve"
   },
   "author": "Yahya Gilany <gilanyym@ucmail.uc.edu>",
   "license": "UNLICENSED",
@@ -19,6 +24,8 @@
     "@testing-library/dom": "^7.31.0",
     "@testing-library/jest-dom": "^5.8.0",
     "@types/jest": "^25.2.3",
+    "@webpack-cli/generators": "^3.0.7",
+    "css-loader": "^6.10.0",
     "cypress": "^13.7.1",
     "directory-tree": "^2.2.4",
     "eslint": "^8.57.0",
@@ -28,7 +35,9 @@
     "prettier": "^2.3.0",
     "regenerator-runtime": "^0.13.5",
     "simple-git": "^2.5.0",
+    "style-loader": "^3.3.4",
     "webpack": "^5.91.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
   }
 }
